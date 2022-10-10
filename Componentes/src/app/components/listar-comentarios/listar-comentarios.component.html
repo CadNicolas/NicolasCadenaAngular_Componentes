@@ -1,0 +1,35 @@
+<div class="row mt3">
+    <div class="col lg6">
+        <h3></h3>
+    </div>
+</div>
+
+<table ngif="listComentarios.length>0">
+    <thead>
+        <tr>
+            <td></td>
+        </tr>
+    </thead>
+
+    <tbody>
+       <tr *ngFor="let comentario of listComentarios">
+
+        <td>{{comentario.titulo}}</td>
+        <td>{{comentario.autor}}</td>
+        <td>{{comentario.fechaCreacion|date:'dd/mm/yyyy'}}</td>
+        <td style="width:5%">
+            <button class="btn btn-primary btn-sm float-end"></button>
+            
+        </td>
+        <td style="width:5%">
+            <button class="btn btn-danger btn-sm float-end"></button>
+        </td>
+
+       </tr>
+    </tbody>
+</table>
+
+<div *ngif="listComentarios.length==0" class="row mt5">
+    <h5></h5>
+
+</div>
